@@ -1,0 +1,266 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Fuzki-UI-Library/main/FuzkiLibrary.lua"))()
+local Main = Library:Create("Light Step X", "v2.0.0")
+
+local Main1 = Main:CreateSection("Home")
+local Preview1 = Main:CreateSection("Remotes")
+local Preview2 = Main:CreateSection("Miscs")
+local Preview3 = Main:CreateSection("Mastery")
+local Preview4 = Main:CreateSection("Settings")
+
+Main1:CreateLabel("Important")
+
+Main1:CreateButton("Click", "Official Website", function()
+setclipboard("https://www.linktr.ee/brine777")
+end) 
+
+Main1:CreateButton("Click", "About", function()
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "Golden Tool";
+    Text = "Creator = goldenwars._.official";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+    Duration = 3;
+})
+wait(3)
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "Golden Tool";
+    Text = "Discord = mech#0945";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+    Duration = 3;
+})
+wait(3)
+   game.StarterGui:SetCore("SendNotification", {
+    Title = "Golden Tool";
+    Text = "Roblox = kyleroblox225";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+    Duration = 3;
+})
+end) 
+
+Main1:CreateLabel("Farms")
+
+Main1:CreateButton("Click", "Auto Farm / v0.01", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Brineeee/autofarm/main/lua-to-obfuscate"))()  
+end) 
+
+Main1:CreateButton("Click", "Disable Lag", function()
+game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs["Coin Rewards HUD"].Disabled = true
+end) 
+
+Main1:CreateButton("Click", "Redeem Ranks", function()
+	workspace.__THINGS.__REMOTES["redeem rank rewards"]:InvokeServer({})			
+end) 
+
+Main1:CreateButton("Click", "Redeem VIP", function()
+	workspace.__THINGS.__REMOTES["redeem vip rewards"]:InvokeServer({})
+end) 
+
+Preview1:CreateLabel("Remotes")
+Preview1:CreateButton("Click", "Pet Collection", function()
+game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled
+end) 
+
+Preview1:CreateButton("Click", "Fuse Machine", function()
+game:GetService("Players").LocalPlayer.PlayerGui.FusePets.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.FusePets.Enabled
+end) 
+
+Preview1:CreateButton("Click", "Golden Machine", function()
+game:GetService("Players").LocalPlayer.PlayerGui.Golden.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Golden.Enabled
+end) 
+
+Preview1:CreateButton("Click", "Rainbow Machine", function()
+game:GetService("Players").LocalPlayer.PlayerGui.Rainbow.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Rainbow.Enabled
+end) 
+
+Preview1:CreateButton("Click", "Dark Matter", function() 
+game:GetService("Players").LocalPlayer.PlayerGui.DarkMatter.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.DarkMatter.Enabled
+end) 
+
+Preview1:CreateButton("Click", "Merchant", function()
+game:GetService("Players").LocalPlayer.PlayerGui.Merchant.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.Merchant.Enabled
+end) 
+
+Preview1:CreateButton("Click", "Enchant", function()
+game:GetService("Players").LocalPlayer.PlayerGui.EnchantPets.Enabled = not game:GetService("Players").LocalPlayer.PlayerGui.EnchantPets.Enabled
+end)
+
+Preview2:CreateLabel("Eggs")
+
+Preview2:CreateButton("Click", "Remove Egg Animation", function()
+_G.pettable = {}
+local mod = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Open Eggs"])
+local f
+f = hookfunction(mod.OpenEgg, function(a1, a2)
+for i, v in pairs(a2) do
+table.insert(_G.pettable, tostring(v["uid"]))
+end
+return
+end)
+end)
+
+Preview2:CreateLabel("Boosts")
+Preview2:CreateButton("Click", "Triple Damage", function()
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://232127604"
+Sound:Play()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Damage")
+        workspace.__THINGS.__REMOTES["activate boost"]:FireServer({[1] = "Triple Damage"})
+    print("Triple damage boost checked")
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "JioaHub";
+    Text = "Triple Damage Activate";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+    Duration = 3;
+})
+end) 
+
+Preview2:CreateButton("Click", "Triple Coins", function()
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://232127604"
+Sound:Play()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Triple Coins")
+        workspace.__THINGS.__REMOTES["activate boost"]:FireServer({[1] = "Triple Damage"})
+    print("Triple coins boost checked")
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "JioaHub";
+    Text = "Triple Damage Activate";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+    Duration = 3;
+}) 
+end) 
+
+Preview2:CreateButton("Click", "Super Lucky", function()
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://232127604"
+Sound:Play()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Super Lucky")
+        workspace.__THINGS.__REMOTES["activate boost"]:FireServer({[1] = "Super Lucky"})
+    print("Super lucky boost checked")
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "JioaHub";
+    Text = "Super Lucky Activate";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+    Duration = 3;
+})
+end)
+
+Preview2:CreateButton("Click", "Ultra Lucky", function()
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://232127604"
+Sound:Play()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Boosts:FindFirstChild("Ultra Lucky")
+        workspace.__THINGS.__REMOTES["activate boost"]:FireServer({[1] = "Ultra Lucky"})
+    print("Ultra lucky boost checked")
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "JioaHub";
+    Text = "Ultra Lucky Activate";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+    Duration = 3;
+})
+end)
+
+Preview2:CreateLabel("Gamepass")
+
+Preview2:CreateButton("Click", "Teleport Gamepass", function()
+local gmppath = require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Gamepasses"])
+gmppath.Owns = function() return true end
+end) 
+
+Preview2:CreateButton("Click", "Teleport Hoverboard", function()
+local tbl = require(game.ReplicatedStorage.Framework.Modules.Client["4 | Save"]).Get()
+tbl.Hoverboards = {}
+for i,v in pairs(game.ReplicatedStorage.Game.Hoverboards:GetChildren())do
+table.insert(tbl.Hoverboards, v.Name)
+end
+getsenv(game.Players.LocalPlayer.PlayerScripts.Scripts.GUIs.Hoverboards).Update()
+getsenv(game.Players.LocalPlayer.PlayerScripts.Scripts.GUIs.Hoverboards).Equip = function(board)
+tbl.EquippedHoverboard = board
+getsenv(game.Players.LocalPlayer.PlayerScripts.Scripts.GUIs.Hoverboards).Update()
+end
+end) 
+
+Preview3:CreateLabel("Enchant Mastery")
+
+Preview3:CreateButton("Click", "Enchant", function()
+_G.EnabledEnchant = true
+_G.SelEnchant1 = 'Rainbow Coins'
+_G.SelLevel1 = 5
+_G.EMERGENCYSTOP = false
+
+local Wanted = {
+[_G.SelEnchant1] = _G.SelLevel1 or 1;
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/owedits/fartsfx/main/enchfart.lua'))()
+end) 
+
+Preview3:CreateLabel("Eggs Mastery")
+
+Preview3:CreateButton("Click", "Eggs", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Brineeee/mastery-eggs/main/lua-to-obfuscate"))()
+end)
+
+Preview3:CreateLabel("Gold/Rainbow / STILL BUG NOT WORKING")
+
+Preview3:CreateTextBox("Amount 0/6", "Type a number", function(countcombinefunc)
+    if countcombinefunc then
+        _G.CountCombineFunc1 = countcombinefunc
+    end
+    --print("Selected Combine Count: ", _G.CountCombineFunc1)
+end)
+
+Preview3:CreateToggle("Auto Gold", false, function(togglegoldfunc)
+    
+if togglegoldfunc == true then
+    _G.ToggleGold = true
+elseif togglegoldfunc == false then
+    _G.ToggleGold = false
+end
+end)
+
+Preview3:CreateToggle("Auto Rainbow", false, function(toggleraibowfunc)
+    
+if toggleraibowfunc == true then
+    _G.ToggleRainbow = true
+elseif toggleraibowfunc == false then
+    _G.ToggleRainbow = false
+end
+end) 
+
+Preview3:CreateToggle("Start", false, function(autocombinefunc)
+if autocombinefunc == true then
+    _G.AutoCom = true
+elseif autocombinefunc == false then
+    _G.AutoCom = false
+end
+
+while wait() and _G.AutoCom do
+    for i, v in pairs(GetPets()) do
+        if #v >= _G.CountCombineFunc1 and _G.AutoCom then
+            if string.find(i, "Normal") and _G.AutoCom and _G.ToggleGold then
+                local Args = {}
+                for eeeee = 1, _G.CountCombineFunc1 do
+                    Args[#Args+1] = v[#Args+1]
+                end
+                Library.Network.Invoke("use golden machine", Args)
+
+            elseif string.find(i, "Gold") and _G.AutoCom and _G.ToggleRainbow then
+                local Args = {}
+                for eeeee = 1, _G.CountCombineFunc1 do
+                    Args[#Args+1] = v[#Args+1]
+                end
+                Library.Network.Invoke("use rainbow machine", Args)
+            end
+        end
+    end
+end
+end)
+
+Preview4:CreateLabel("Settings")
+
+Preview4:CreateButton("JumpPower", "Type a number", 0, 1, 9999, function()
+  game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+end)
+
+Preview4:CreateButton("WalkSpeed", "Type a number", 0, 1, 9999, function()
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+end) 
